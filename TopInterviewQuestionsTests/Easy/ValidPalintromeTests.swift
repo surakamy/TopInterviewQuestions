@@ -61,6 +61,10 @@ class ValidPalintromeTests: XCTestCase {
         XCTAssertTrue(isPalindrome("A"))
     }
 
+    func test_palindrome_whenOnlyNumbers() {
+        XCTAssertTrue(isPalindrome("12321"))
+    }
+
     func test_palindrome_whenOnlyUpperCaseLetters() {
         XCTAssertTrue(isPalindrome("ABCBA"))
     }
