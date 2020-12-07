@@ -22,44 +22,41 @@ import XCTest
  */
 
 
-class Solution {
+// Time complexity: O(n)
+// Space complexity: O(n)
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    if nums.count < 2 { return [] }
 
-    // Time complexity: O(n)
-    // Space complexity: O(n)
-    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        if nums.count < 2 { return [] }
-
-        // 1. Note to consider:
-        // Reserving a capacity takes up space even for cases when it is not necesary.
-        var processed = Dictionary<Int, Int>(minimumCapacity: nums.count - 1)
-        // 2. Note to consider:
-        // Swift Enumerator is slower than a simple for loop.
-        for (idx, value) in nums.enumerated() {
-            let aPairValue = target - value
-            if let aPairIndex = processed[aPairValue] {
-                return [aPairIndex, idx]
-            }
-            processed[value] = idx
+    // 1. Note to consider:
+    // Reserving a capacity takes up space even for cases when it is not necesary.
+    var processed = Dictionary<Int, Int>(minimumCapacity: nums.count - 1)
+    // 2. Note to consider:
+    // Swift Enumerator is slower than a simple for loop.
+    for (idx, value) in nums.enumerated() {
+        let aPairValue = target - value
+        if let aPairIndex = processed[aPairValue] {
+            return [aPairIndex, idx]
         }
-
-        return []
+        processed[value] = idx
     }
+
+    return []
 }
 
 class TwoSumTests: XCTestCase {
 
     func test_input_breaksConstraints_retursEmptyIndices() throws {
-        XCTAssertEqual(Solution().twoSum([], 0), [], "Too few nums")
-        XCTAssertEqual(Solution().twoSum([1], 0), [], "Too few nums")
-        XCTAssertEqual(Solution().twoSum([1, 2], 1), [], "No valid pair matches target")
-        XCTAssertEqual(Solution().twoSum([3, 3], 3), [], "No valid pair matches target")
+        XCTAssertEqual(twoSum([], 0), [], "Too few nums")
+        XCTAssertEqual(twoSum([1], 0), [], "Too few nums")
+        XCTAssertEqual(twoSum([1, 2], 1), [], "No valid pair matches target")
+        XCTAssertEqual(twoSum([3, 3], 3), [], "No valid pair matches target")
     }
 
     func test_input_valid_returnsIndices() {
-        XCTAssertEqual(Solution().twoSum([3, 5, 7, 8, 9, 3], 6), [0, 5])
-        XCTAssertEqual(Solution().twoSum([2, 7, 11, 15], 9), [0, 1])
-        XCTAssertEqual(Solution().twoSum([3, 2, 4], 6), [1, 2])
-        XCTAssertEqual(Solution().twoSum([3, 3], 6), [0, 1])
+        XCTAssertEqual(twoSum([3, 5, 7, 8, 9, 3], 6), [0, 5])
+        XCTAssertEqual(twoSum([2, 7, 11, 15], 9), [0, 1])
+        XCTAssertEqual(twoSum([3, 2, 4], 6), [1, 2])
+        XCTAssertEqual(twoSum([3, 3], 6), [0, 1])
     }
 
 }
