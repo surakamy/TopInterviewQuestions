@@ -24,7 +24,9 @@ func isPalindrome(_ s: String) -> Bool {
     }
 
     let input = Array(
-        s.filter { $0.isLetter || $0.isNumber }.lowercased()
+        s.filter { $0.isLetter || $0.isNumber }
+        .lowercased()
+        .utf8
     )
 
     if input.count < 1 {
