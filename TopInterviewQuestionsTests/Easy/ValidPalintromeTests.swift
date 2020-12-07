@@ -20,7 +20,7 @@ import XCTest
 func isPalindrome(_ s: String) -> Bool {
 
     let input = Array(
-        s.lowercased()
+        s.filter { $0.isLetter || $0.isNumber }.lowercased()
     )
 
     var i = 0
@@ -56,5 +56,9 @@ class ValidPalintromeTests: XCTestCase {
 
     func test_palindrome_whenLettersAndNumbers() {
         XCTAssertTrue(isPalindrome("a2Bcb2A"))
+    }
+
+    func test_palindrome_whenLettersAndNumbersPlusIgnoredCharacters() {
+        XCTAssertTrue(isPalindrome("a.bcb-a"))
     }
 }
