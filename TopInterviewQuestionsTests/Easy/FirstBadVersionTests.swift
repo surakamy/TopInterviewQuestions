@@ -33,7 +33,17 @@ class VersionControl {
 
 class FirstBadVersionSolution : VersionControl {
     func firstBadVersion(_ n: Int) -> Int {
-        0
+        var (start, end) = (1, n)
+
+        while start != end {
+            let mid = start + (end - start) / 2
+            if isBadVersion(mid) {
+                end = mid
+            } else {
+                start = mid + 1
+            }
+        }
+        return end
     }
 }
 
@@ -48,6 +58,21 @@ class FirstBadVersionTests: XCTestCase {
     func test_isBadVersion_returnFalse_whenVersionLessThanBad() {
         let sut = VersionControl(bad: 4)
         XCTAssertFalse(sut.isBadVersion(3))
+    }
+
+    func test_Sample1() {
+        let sut = FirstBadVersionSolution(bad: 4)
+        XCTAssertEqual(sut.firstBadVersion(5), 4)
+    }
+
+    func test_Sample2() {
+        let sut = FirstBadVersionSolution(bad: 1)
+        XCTAssertEqual(sut.firstBadVersion(1), 1)
+    }
+
+    func test_Sample3() {
+        let sut = FirstBadVersionSolution(bad: 2)
+        XCTAssertEqual(sut.firstBadVersion(7), 2)
     }
 
 }
