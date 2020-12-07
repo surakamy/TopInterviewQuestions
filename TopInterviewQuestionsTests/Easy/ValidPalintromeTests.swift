@@ -20,7 +20,7 @@ import XCTest
 func isPalindrome(_ s: String) -> Bool {
 
     let input = Array(
-        s
+        s.lowercased()
     )
 
     var i = 0
@@ -50,4 +50,7 @@ class ValidPalintromeTests: XCTestCase {
         XCTAssertTrue(isPalindrome("abcba"))
     }
 
+    func test_palindrome_whenCasesMixed() {
+        XCTAssertTrue(isPalindrome("aBcbA"))
+    }
 }
