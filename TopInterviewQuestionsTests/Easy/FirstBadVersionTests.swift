@@ -33,7 +33,8 @@ class VersionControl {
 
 class FirstBadVersionSolution : VersionControl {
     func firstBadVersion(_ n: Int) -> Int {
-        var (start, end) = (1, n)
+        var start = 1
+        var end = n
 
         while start != end {
             let mid = start + (end - start) / 2
@@ -75,4 +76,12 @@ class FirstBadVersionTests: XCTestCase {
         XCTAssertEqual(sut.firstBadVersion(7), 2)
     }
 
+
+    func test_Performance() {
+        let sut = FirstBadVersionSolution(bad: 4)
+
+        measure {
+            _ = sut.firstBadVersion(5)
+        }
+    }
 }
