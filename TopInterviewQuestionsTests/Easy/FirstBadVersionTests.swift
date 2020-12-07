@@ -32,6 +32,8 @@ class VersionControl {
 }
 
 class FirstBadVersionSolution : VersionControl {
+    // Time complexity: O(log n)
+    // Space complexity: O(1)
     func firstBadVersion(_ n: Int) -> Int {
         var start = 1
         var end = n
