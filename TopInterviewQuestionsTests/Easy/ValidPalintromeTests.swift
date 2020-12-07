@@ -19,9 +19,17 @@ import XCTest
 
 func isPalindrome(_ s: String) -> Bool {
 
+    if s.count < 1 {
+        return true
+    }
+
     let input = Array(
         s.filter { $0.isLetter || $0.isNumber }.lowercased()
     )
+
+    if input.count < 1 {
+        return true
+    }
 
     var i = 0
     while i <= input.count / 2 {
@@ -40,6 +48,15 @@ class ValidPalintromeTests: XCTestCase {
 
     func test_noPalindomeCases() {
         XCTAssertFalse(isPalindrome("race a car"))
+    }
+
+    func test_palindrome_whenEmpty() {
+        XCTAssertTrue(isPalindrome(""))
+        XCTAssertTrue(isPalindrome("."))
+    }
+
+    func test_palindrome_whenOneCharacter() {
+        XCTAssertTrue(isPalindrome("A"))
     }
 
     func test_palindrome_whenOnlyUpperCaseLetters() {
