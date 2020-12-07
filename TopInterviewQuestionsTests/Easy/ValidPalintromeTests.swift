@@ -53,4 +53,8 @@ class ValidPalintromeTests: XCTestCase {
     func test_palindrome_whenCasesMixed() {
         XCTAssertTrue(isPalindrome("aBcbA"))
     }
+
+    func test_palindrome_whenLettersAndNumbers() {
+        XCTAssertTrue(isPalindrome("a2Bcb2A"))
+    }
 }
