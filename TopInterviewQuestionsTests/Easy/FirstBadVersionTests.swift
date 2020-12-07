@@ -20,17 +20,34 @@ import XCTest
  */
 
 class VersionControl {
+    let bad: Int
+
+    init(bad: Int) {
+        self.bad = bad
+    }
+
     func isBadVersion(_ version: Int) -> Bool {
-        false
+        version >= bad
     }
 }
 
-class Solution : VersionControl {
+class FirstBadVersionSolution : VersionControl {
     func firstBadVersion(_ n: Int) -> Int {
         0
     }
 }
+
+
 class FirstBadVersionTests: XCTestCase {
 
+    func test_isBadVersion_returnTrue_whenVersionGreaterOrEqualThanBad() {
+        let sut = VersionControl(bad: 4)
+        XCTAssertTrue(sut.isBadVersion(5))
+    }
+
+    func test_isBadVersion_returnFalse_whenVersionLessThanBad() {
+        let sut = VersionControl(bad: 4)
+        XCTAssertFalse(sut.isBadVersion(3))
+    }
 
 }
