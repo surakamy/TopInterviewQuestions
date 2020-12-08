@@ -17,6 +17,10 @@ import XCTest
     1 <= n <= 45
  */
 
+
+// Time complexity: O(n)
+// Space complexity: O(n)
+// Note: we can ommit recursion and use just `steps` (Memo) and a loop
 func climbStairs(_ n: Int) -> Int {
     var steps: [Int: Int] = [:]
 
@@ -52,6 +56,8 @@ class ClibmingStairsTests: XCTestCase {
 }
 
 /*
+
+ Sub-problems
 
  1 1         2
  2
