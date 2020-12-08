@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		1824C8BB257EAC13008B7544 /* ValidPalintromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824C8BA257EAC13008B7544 /* ValidPalintromeTests.swift */; };
 		1824C8C0257EB8D1008B7544 /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824C8BF257EB8D1008B7544 /* FirstBadVersionTests.swift */; };
+		1824C8C9257F57C9008B7544 /* ClibmingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824C8C8257F57C9008B7544 /* ClibmingStairsTests.swift */; };
 		188494F6257E9760004B25D3 /* TwoSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188494F5257E9760004B25D3 /* TwoSumTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1824C8BA257EAC13008B7544 /* ValidPalintromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidPalintromeTests.swift; sourceTree = "<group>"; };
 		1824C8BF257EB8D1008B7544 /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
+		1824C8C8257F57C9008B7544 /* ClibmingStairsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClibmingStairsTests.swift; sourceTree = "<group>"; };
 		188494E6257E9645004B25D3 /* TopInterviewQuestionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopInterviewQuestionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188494EA257E9645004B25D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188494F5257E9760004B25D3 /* TwoSumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumTests.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				188494F5257E9760004B25D3 /* TwoSumTests.swift */,
 				1824C8BA257EAC13008B7544 /* ValidPalintromeTests.swift */,
 				1824C8BF257EB8D1008B7544 /* FirstBadVersionTests.swift */,
+				1824C8C8257F57C9008B7544 /* ClibmingStairsTests.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				188494F6257E9760004B25D3 /* TwoSumTests.swift in Sources */,
 				1824C8BB257EAC13008B7544 /* ValidPalintromeTests.swift in Sources */,
+				1824C8C9257F57C9008B7544 /* ClibmingStairsTests.swift in Sources */,
 				1824C8C0257EB8D1008B7544 /* FirstBadVersionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
