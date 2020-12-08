@@ -18,9 +18,54 @@ import XCTest
  */
 
 func climbStairs(_ n: Int) -> Int {
-    0
+    if n <= 2 {
+        return n
+    }
+
+    return climbStairs(n - 1) + climbStairs(n - 2)
 }
 
 class ClibmingStairsTests: XCTestCase {
 
+    func test_input_one_returns_one() {
+        XCTAssertEqual(climbStairs(1), 1)
+        XCTAssertEqual(climbStairs(2), 2)
+        XCTAssertEqual(climbStairs(3), 3)
+        XCTAssertEqual(climbStairs(4), 5)
+        XCTAssertEqual(climbStairs(5), 8)
+        XCTAssertEqual(climbStairs(6), 13)
+    }
 }
+
+/*
+
+ 1 1         2
+ 2
+
+ 1  1 1       3
+ 1  2
+ 2 1
+
+ 1  1 1 1     4
+ 1  1 2
+ 1  2 1
+ 2 2
+ 2 1 1
+
+ 1  1 1 1 1     5
+ 1  1 1 2
+ 1  1 2 1
+ 1  2 2
+ 1  2 1 1
+ 2 1 1 1
+ 2 2 1
+ 2 1 2
+
+
+ n = 2 s = 1
+ n = 3 s = 1
+ n = 4 s = 2
+ n = 5 s = 3
+
+
+ */
