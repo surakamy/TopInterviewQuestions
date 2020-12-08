@@ -18,12 +18,26 @@ import XCTest
  */
 
 func climbStairs(_ n: Int) -> Int {
-    if n <= 2 {
-        return n
+    var steps: [Int: Int] = [:]
+
+    func _climbStairs(_ n: Int) -> Int {
+        if let calculated = steps[n] {
+            return calculated
+        }
+        if n <= 2 {
+            return n
+        }
+
+        let result = _climbStairs(n - 1) + _climbStairs(n - 2)
+        steps[n] = result
+        return result
     }
 
-    return climbStairs(n - 1) + climbStairs(n - 2)
+    return _climbStairs(n)
 }
+
+
+
 
 class ClibmingStairsTests: XCTestCase {
 
