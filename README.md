@@ -1,5 +1,5 @@
-# TopInterviewQuestions
-Exercises: Top Interview Questions and Solutions
+# Top Interview Questions
+Exercises from Leetcode with my solutions using TDD
 
 ## Solved Easy Problems
 * [Climbing Strairs](https://leetcode.com/problems/climbing-stairs/)
