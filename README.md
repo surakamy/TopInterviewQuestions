@@ -7,3 +7,6 @@ Exercises: Top Interview Questions and Solutions
 * [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 * [Two Sum](https://leetcode.com/problems/two-sum/)
 * [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+
+## Solved Medium Problems
+* [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd/) (Concurrency)
