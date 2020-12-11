@@ -15,6 +15,7 @@
 		1824C8D5257F940E008B7544 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1824C8D3257F940E008B7544 /* README.md */; };
 		1824C8DB257FF8B5008B7544 /* PrintZeroEvenOddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824C8DA257FF8B5008B7544 /* PrintZeroEvenOddTests.swift */; };
 		188494F6257E9760004B25D3 /* TwoSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188494F5257E9760004B25D3 /* TwoSumTests.swift */; };
+		1899B2EA2583A65300C45492 /* ShuffleAnArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899B2E92583A65300C45492 /* ShuffleAnArrayTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		188494E6257E9645004B25D3 /* TopInterviewQuestionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopInterviewQuestionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188494EA257E9645004B25D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188494F5257E9760004B25D3 /* TwoSumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumTests.swift; sourceTree = "<group>"; };
+		1899B2E92583A65300C45492 /* ShuffleAnArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleAnArrayTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				1824C8DA257FF8B5008B7544 /* PrintZeroEvenOddTests.swift */,
+				1899B2E92583A65300C45492 /* ShuffleAnArrayTests.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1899B2EA2583A65300C45492 /* ShuffleAnArrayTests.swift in Sources */,
 				1824C8CE257F85C6008B7544 /* ReverseLinkedListTests.swift in Sources */,
 				188494F6257E9760004B25D3 /* TwoSumTests.swift in Sources */,
 				1824C8BB257EAC13008B7544 /* ValidPalintromeTests.swift in Sources */,
