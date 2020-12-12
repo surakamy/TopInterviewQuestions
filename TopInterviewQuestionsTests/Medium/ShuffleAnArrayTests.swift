@@ -45,7 +45,7 @@ class Solution {
     func shuffle2() -> [Int] { values.shuffled() }
 
     @inline(__always) func nextRand(_ i: Int, _ n: Int) -> Int {
-        Int.random(in: min(i+1, n-1)...n-1)
+        Int.random(in: min(i, n-1)...n-1)
     }
 }
 
@@ -77,7 +77,7 @@ class ShuffleAnArrayTests: XCTestCase {
         }.reduce(0, +)
 
         XCTAssertNotEqual(result, input)
-        XCTAssertGreaterThan(changedPositions, input.count / 2, "Shuffled but not as good as possible")
+        XCTAssertGreaterThan(changedPositions, input.count / 2 - 1, "Shuffled but not as good as possible")
     }
 
 
@@ -91,17 +91,19 @@ class ShuffleAnArrayTests: XCTestCase {
         }.reduce(0, +)
 
         XCTAssertNotEqual(result, input)
-        XCTAssertGreaterThan(changedPositions, input.count / 2, "Shuffled but not as good as possible")
+        XCTAssertGreaterThan(changedPositions, input.count / 2 - 1, "Shuffled but not as good as possible")
     }
 
-    func test_Solution_shuffle_failed() {
+    func test_Solution_shuffle_manyTimes() {
         let input = [-6, 10, 184]
         let sut = Solution(input)
 
-        XCTAssertNotEqual(sut.shuffle(), input)
-        XCTAssertEqual(sut.reset(), input)
-        XCTAssertNotEqual(sut.shuffle(), input)
-        XCTAssertEqual(sut.reset(), input)
+        let count = (1...100).map { _ in
+            sut.shuffle() != input ? 1 : 0
+        }.reduce(0, +)
+
+
+        XCTAssertGreaterThanOrEqual(count, 50)
     }
 
     func test_Solution_shuffle_100times() {
